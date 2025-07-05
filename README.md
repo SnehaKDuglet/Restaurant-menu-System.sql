@@ -1,3 +1,3 @@
-# placement_projects
+# Restaurant_menu_System.sql
 
-A collection of real-world SQL projects featuring clean database design, optimized queries, and relational models. 
+A relational database system designed to manage recipes, ingredients, categories and user feedback for a restaurant. This SQL-based project simulates real-world restaurant operations, focusing on menu organization, order planning, and customer interaction.
