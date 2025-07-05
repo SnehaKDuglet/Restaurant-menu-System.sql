@@ -1,0 +1,118 @@
+CREATE TABLE recipes (
+    recipe_id INT PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    description TEXT,
+    category_id INT,
+    cooking_time_minutes INT,
+    servings INT,
+    FOREIGN KEY (category_id) REFERENCES categories(category_id)
+);
+
+select * from recipes
+
+INSERT INTO recipes 
+VALUES
+(1251, 'Fried eggs', 'Eggs cooked on a hot pan with crispy edges and runny or firm yolks', 1, 6, 2),  
+(1252, 'Apple crumb coffee cake', 'A crumb cake with a crunchy-sweet topping and a lesson in using the right sized pan', 1, 45, 2),
+(1253, 'Waffles', 'Crispy grid-patterned treats', 1, 30, 3 ),
+(1254, 'Pecan meusli', 'Explore the bulk section of your grocery store for your favorite kind of flakes to build your base', 1, 25, 1 ),
+(1255, 'Special paranthas', 'Traditionally cooked on a hot griddle offering a perfect balance of indulgence and nostalgia', 1, 25, 1), 
+(1256, 'Poha', 'Flattened rice cooked with spices', 1, 25, 1),
+(2251, 'Rajma Chawal', 'Kidney beans with rice', 2, 60, 4),
+(2252, 'Paneer Butter Masala', 'Creamy tomato-based paneer curry', 2, 40, 4),
+(2253, 'Chole Bhature', 'Spiced chickpeas with fluffy fried bread.', 2, 50, 2), 
+(2254, 'Tacos', 'Soft or crispy tortillas filled with meat or beans', 2, 30, 2),
+(2255, 'Greek Salad', 'Fresh veggies with feta cheese and olives', 2, 10, 2),
+(2256, 'Brown Rice & Stir-Fry', 'Whole grains with sautéed vegetables', 2, 50, 2),
+(3251, 'Rajma Chawal', 'Kidney beans with rice', 3, 60, 4),
+(3252, 'Baingan Bharta', 'Smoky mashed eggplant with spices', 3, 50, 2),
+(3253, 'Vegetable Biryani', 'Fragrant rice with mixed vegetable', 3, 30, 4),
+(3254, 'Kadhi Pakora', 'Yogurt-based curry with gram flour fritters', 3, 45, 4),
+(3255, 'Quinoa Salad', 'Protein-packed quinoa with veggies', 3, 20, 2),
+(3256, 'Paneer Butter Masala', 'Creamy tomato-based paneer curry', 3, 40, 4), 
+(3257, 'Steamed Fish & Veggies', 'Light and flavorful', 3, 10, 2),
+(4251, 'Party Cheese Bread', 'The cheesy, butter bread is so simple to make but the taste is sinful', 4, 10, 2),
+(4252, 'Cheese Fries', 'Quick, easy and a surefire hit at your next gameday potluck or family gathering', 4, 20, 2),
+(4253, 'Pizza Dip', 'Looking for a hot dip recipe that everyone will love? Cheesy pizza dip is the answer', 4, 30, 6),
+(4254, 'Crispy Spring Rolls', 'Such a great appetizer to have waiting in the freezer!', 4, 5, 2),
+(4255, 'Paneer Tikka', 'Grilled paneer cubes marinated in spices', 4, 15, 2),
+(4256, 'Samosas', 'Crispy pastries stuffed with spiced potatoes', 4, 30, 4),
+(4257, 'Mini Sandwiches', 'Serving them on lightly-toasted sweet dinner rolls is perfection made easy', 4, 5, 2),
+(4258, 'Air-Fried Pickles', 'Zesty and perfectly seasoned, they make a great snack for game-day parties', 4, 7, 2),
+(5251, 'Greek Salad', 'Fresh veggies with feta cheese and olives', 5, 10, 2),
+(5252, 'Quinoa Salad', 'Protein-packed quinoa with veggies', 5, 20, 2),
+(5253, 'Fruit Salad', 'A sweet blend of seasonal fruits like berries, mangoes, and melons, often drizzled with honey or yogurt', 5, 10, 4),
+(5254, 'Pasta Salad', 'Cooked pasta mixed with veggies, olives, and cheese, dressed with Italian or ranch dressing', 5, 15, 2),
+(6251, 'Paneer Butter Masala', 'Creamy tomato-based curry', 6, 40, 4),
+(6252, 'Rajma Chawal', 'Spiced kidney beans served with steamed rice.', 6, 60, 4),
+(6253, 'Chole Bhature', 'Spiced chickpeas with fluffy fried bread.', 6, 50, 2),
+(6254, 'Palak Paneer', 'Cottage cheese simmered in a spinach gravy.', 6, 35, 4),
+(6255, 'Dal Makhani', 'Slow-cooked black lentils in buttery tomato sauce.', 6, 90, 2),
+(6256, 'Biryani', 'Aromatic rice dish layered with spiced meat or vegetables.', 6, 70, 4),
+(6257, 'Veg Pulao', 'Fragrant rice cooked with mixed vegetables.', 6, 30, 3),
+(6258, 'Kadhi Pakora', 'Gram flour fritters in tangy yogurt curry.', 6, 45, 4),
+(7251, 'Raita', 'Cooling yogurt mixed with spices and vegetables.', 7, 10, 2),
+(7252, 'Papad', 'Crispy thin wafers roasted or fried as a crunchy side.', 7, 5, 2),
+(7253, 'Pickle', 'Tangy and spicy preserved vegetables.', 7, 30, 10),
+(7254, 'Green Chutney', 'Fresh coriander-mint paste with spices and lemon.', 7, 5, 4),
+(7255, 'Boondi Raita', 'Yogurt blended with spiced crunchy boondi.', 7, 10, 2),
+(7256, 'Masala Fries', 'Potato fries tossed with Indian spices.', 7, 20, 2),
+(8251, 'Banana Bread', 'Moist and sweet loaf made with ripe bananas.', 8, 60, 6),
+(8252, 'Chocolate Chip Cookies', 'Crispy edges with gooey chocolate chunks.', 8, 25, 12),
+(8253, 'Blueberry Muffins', 'Soft muffins packed with juicy blueberries.', 8, 30, 6),
+(8254, 'Garlic Breadsticks', 'Oven-baked sticks brushed with garlic butter.', 8, 20, 4),
+(8255, 'Apple Pie', 'Classic pie with spiced apple filling and flaky crust.', 8, 50, 8),
+(8256, 'Cheesy Pull-Apart Bread', 'Soft baked bread loaded with melted cheese.', 8, 35, 6),
+(9251, 'Gulab Jamun', 'Deep-fried milk balls soaked in rose-flavored syrup.', 9, 45, 6),
+(9252, 'Rasgulla', 'Spongy cottage cheese balls in light sugar syrup.', 9, 30, 6),
+(9253, 'Chocolate Mousse', 'Light and airy dessert made with chocolate and cream.', 9, 20, 4),
+(9254, 'Kheer', 'Rice pudding simmered in milk and cardamom.', 9, 40, 5),
+(9255, 'Brownies', 'Fudgy chocolate squares with a rich flavor.', 9, 35, 9),
+(10251, 'Samosa', 'Crispy pastries stuffed with spiced potatoes', 10, 30, 4),
+(10252, 'Pakora', 'Bite-sized vegetables deep-fried in chickpea batter.', 10, 20, 4),
+(10253, 'Masala Corn', 'Steamed corn tossed with butter, lime, and spices.', 10, 10, 2),
+(10254, 'Aloo Tikki', 'Shallow-fried spiced potato patties.', 10, 25, 3),
+(11251, 'Tomato Soup', 'Smooth and tangy tomato puree with herbs.', 11, 20, 2),
+(11252, 'Sweet Corn Soup', 'Mildly spiced soup with corn and vegetables.', 11, 25, 2),
+(11253, 'Minestrone', 'Italian-style soup with beans, veggies, and pasta.', 11, 30, 3),
+(11254, 'Hot and Sour Soup', 'Spicy and tangy soup with mushrooms and tofu.', 11, 20, 2),
+(12251, 'Plum Cake', 'Rich cake with dried fruits and nuts, perfect for Christmas.', 12, 60, 8),
+(12252, 'Gingerbread Cookies', 'Spiced cookies shaped for festive cheer.', 12, 30, 12),
+(12253, 'Stuffed Turkey', 'Classic roast turkey filled with flavorful stuffing.', 12, 180, 6),
+(12254, 'Holiday Punch', 'Refreshing fruit drink with a festive twist.', 12, 10, 4),
+(12255, 'Diwali Chakli', 'Spiral savory snack, crisp and golden.', 12, 40, 6),
+(12256, 'Christmas Sugar Cookies', 'Colorful cookies decorated with icing.', 12, 25, 10),
+(12257, 'Gujiya', 'Sweet dumpling filled with khoya and dry fruits.', 12, 45, 6),
+(12258, 'New Year Pulao', 'Festive rice cooked with dry fruits and ghee.', 12, 35, 4),
+(13251, 'Veg Biryani', 'Layered rice dish with marinated vegetables.', 13, 45, 4),
+(13252, 'Baingan Bharta', 'Smoky mashed eggplant cooked with spices.', 13, 30, 3),
+(13253, 'Tinda Masala', 'Indian apple gourd curry in spiced gravy.', 13, 25, 3),
+(13254, 'Paneer Tikka', 'Grilled paneer cubes marinated in yogurt and spices.', 13, 35, 3),
+(13255, 'Bhindi Fry', 'Crispy okra sautéed with onions and spices.', 13, 20, 3),
+(14251, 'French Ratatouille', 'Layered vegetables baked in herbed tomato sauce.', 14, 50, 4),
+(14252, 'Thai Green Curry', 'Coconut-based curry with vegetables or tofu.', 14, 40, 4),
+(14253, 'Moussaka', 'Greek layered dish with eggplant and béchamel sauce.', 14, 70, 6),
+(15251, 'Patrodu', 'Steamed colocasia leaves layered with spiced gram flour, rolled and shallow-fried.', 15, 40, 4),
+(15252, 'Siddu', 'Soft steamed wheat buns stuffed with spiced dal or dry fruits.', 15, 60, 4),
+(15253, 'Chana Madra', 'Chickpeas simmered in a thick yogurt-based gravy with traditional Himachali spices.', 15, 45, 4),
+(15254, 'Khatta', 'Tangy and sweet Himachali curry made with tamarind, jaggery, and gram flour.', 15, 30, 4),
+(15255, 'Jhangora Kheer', 'Sweet pudding made from barnyard millet.', 15, 30, 4),
+(16251, 'Chicken Biryani', 'Layered rice and marinated chicken slow-cooked together.', 16, 60, 4),
+(16252, 'Fish Curry', 'Spicy fish simmered in a tangy gravy.', 16, 35, 4),
+(16253, 'Mutton Rogan Josh', 'Tender mutton in Kashmiri-style red gravy.', 16, 75, 5),
+(16254, 'Egg Curry', 'Boiled eggs in rich tomato-onion gravy.', 16, 30, 3),
+(16255, 'Tandoori Chicken', 'Chicken marinated in yogurt and spices, grilled to perfection.', 16, 50, 4),
+(16256, 'Prawn Masala', 'Juicy prawns cooked in spicy coastal-style curry.', 16, 30, 3);
+
+
+
+
+
+
+
+
+
+
+
+
+
